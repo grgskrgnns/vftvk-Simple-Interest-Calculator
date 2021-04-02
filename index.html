@@ -1,16 +1,40 @@
 <html>
     <head>
-    <script src="script.js"></script>
+    <title>Web App – Simple Interest Calculator</title>
+	<script src="script.js"></script>
     <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <h1>Simple Interest Calculator</h1>
-
-        Amount <input type="number"  id="principal">  <br/>
-        Rate <input type="number"  id="rate">  <br/>
-        No. of Years <input type="number"  id="years">  <br/>
-        Interest : <span id="result"></span><br>
+        <div id = "maindiv">
+		<h1>Simple Interest Calculator</h1>
+		<label>Amount</label>
+        <input class = "myedit" type="number"  id="principal">  <br/>
+		
+        <label>Rate</label>
+		<input type="range" class = "myedit" type="number"  id="rate" 
+		min="1" max="20" value="3.5" step="0.1" oninput="this.nextElementSibling.value = this.value"> <output>3.5</output>%<br/>
+		
+		<label>No. of Years</label>
+		<select id="years" name="years" class = "myedit">
+		<option value="1" selected>1</option>
+		<option value="2">2</option>
+		<option value="3">3</option>
+		<option value="4">4</option>
+		<option value="5">5</option>
+		<option value="6">6</option>
+		<option value="7">7</option>
+		<option value="8">8</option>
+		<option value="9">9</option>
+		<option value="10">10</option>
+		</select> <br/>
 
         <button onclick="compute()">Compute</button>
+		
+		<p id="mypara"></p>
+		
+		<footer>&copy; Everyone can get rich</footer>
+		
+		</div>
+		
     </body>
 </html>
